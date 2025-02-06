@@ -33,6 +33,7 @@ const pool = new Pool({
   database: process.env.DB_NAME, // Nome do banco de dados
   password: process.env.DB_PASS, // Senha do banco
   port: process.env.DB_PORT || 5432, // Porta padrão do PostgreSQL
+  ssl: { rejectUnauthorized: false } // Adiciona suporte a SSL
 });
 /* eslint-enable no-undef */
 
